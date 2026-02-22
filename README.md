@@ -1,43 +1,25 @@
-# FPGA Low-Latency DAQ System
+# FPGA Low-Latency Trigger and Timestamped Data Acquisition
+
+A Verilog-based simulation of a low-latency FPGA trigger architecture inspired by real-time hardware trigger systems used in high-speed data acquisition pipelines.
+
+---
 
 ## Overview
-This project simulates a modular low-latency FPGA-based trigger and timestamped data acquisition (DAQ) architecture in Verilog.
 
-The goal is to explore deterministic real-time system design, focusing on timing constraints, modular architecture, and verification workflows.
+This project implements a synchronous trigger block that compares incoming data samples against a programmable threshold and asserts a trigger output when the condition is met.
 
----
-
-## Design Constraints
-
-Timing constraint (setup + logic delay):
-
-T_clk > T_cq + T_logic + T_setup
-
-Throughput consideration:
-
-Throughput = Data Width × Clock Frequency
+The design emphasizes deterministic latency and synchronous digital design principles.
 
 ---
 
-## Architecture (Planned Modules)
+## Architecture
 
-- Trigger logic (threshold-based event detection)
-- Timestamp counter
-- FIFO buffering system
-- CRC integrity module
-- Testbench for verification
+- `trigger.v` – Threshold comparison logic
+- `timestamp_counter.v` – Free-running counter
+- `fifo.v` – Simple buffering module
+- `tb/` – Functional verification testbenches
 
----
+Trigger logic:
 
-## Objectives
-
-- Implement modular RTL design
-- Simulate latency-aware architecture
-- Validate functionality via structured testbenches
-- Extend toward fixed-point inference blocks (future work)
-
----
-
-## Status
-
-Project structure initialized. RTL implementation in progress.
+```verilog
+trigger_out <= (data_in > threshold);
