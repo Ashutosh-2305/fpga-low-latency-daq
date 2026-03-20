@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="340" viewBox="0 0 1100 340">
+  <rect width="1100" height="340" fill="#eef3f1"/>
+  <rect x="24" y="24" width="1052" height="292" rx="14" fill="#fbfefd" stroke="#b8cbc3"/>
+  <text x="40" y="52" font-family="Menlo, monospace" font-size="20" fill="#213a34">Integrated DAQ Front-End Verification</text>
+  <text x="40" y="78" font-family="Menlo, monospace" font-size="12" fill="#527066">Example from tb_daq_frontend showing trigger, timestamp capture, FIFO fill, and packet readout.</text>
+  <g stroke="#d2ddd8" stroke-width="1">
+    <line x1="220" y1="96" x2="1030" y2="96"/>
+    <line x1="220" y1="132" x2="1030" y2="132"/>
+    <line x1="220" y1="168" x2="1030" y2="168"/>
+    <line x1="220" y1="204" x2="1030" y2="204"/>
+    <line x1="220" y1="240" x2="1030" y2="240"/>
+    <line x1="220" y1="276" x2="1030" y2="276"/>
+    <line x1="260" y1="96" x2="260" y2="292"/>
+    <line x1="380" y1="96" x2="380" y2="292"/>
+    <line x1="500" y1="96" x2="500" y2="292"/>
+    <line x1="620" y1="96" x2="620" y2="292"/>
+    <line x1="740" y1="96" x2="740" y2="292"/>
+    <line x1="860" y1="96" x2="860" y2="292"/>
+    <line x1="980" y1="96" x2="980" y2="292"/>
+  </g>
+  <g font-family="Menlo, monospace" font-size="13" fill="#213a34">
+    <text x="40" y="108">data_in</text>
+    <text x="40" y="144">trigger_out</text>
+    <text x="40" y="180">event_timestamp</text>
+    <text x="40" y="216">event_valid</text>
+    <text x="40" y="252">fifo_level</text>
+    <text x="40" y="288">fifo_dout</text>
+  </g>
+  <g font-family="Menlo, monospace" font-size="12" fill="#527066">
+    <text x="247" y="310">c0</text>
+    <text x="367" y="310">c1</text>
+    <text x="487" y="310">c2</text>
+    <text x="607" y="310">c3</text>
+    <text x="727" y="310">c4</text>
+    <text x="847" y="310">c5</text>
+    <text x="967" y="310">c6</text>
+  </g>
+  <polyline fill="none" stroke="#22577a" stroke-width="3" points="220,116 340,116 340,100 460,100 460,116 580,116 580,94 700,94 700,88 820,88 820,82 940,82 940,76 1030,76"/>
+  <g font-family="Menlo, monospace" font-size="12" fill="#22577a">
+    <text x="270" y="129">40</text>
+    <text x="390" y="129">125</text>
+    <text x="510" y="129">80</text>
+    <text x="630" y="129">130</text>
+    <text x="750" y="129">135</text>
+    <text x="870" y="129">140</text>
+  </g>
+  <polyline fill="none" stroke="#bc4749" stroke-width="3" points="220,148 340,148 340,132 460,132 460,148 580,148 580,132 700,132 700,132 820,132 820,132 940,132 940,132 1030,132"/>
+  <g font-family="Menlo, monospace" font-size="12" fill="#bc4749">
+    <text x="350" y="129">1</text>
+    <text x="590" y="129">1</text>
+    <text x="710" y="129">1</text>
+    <text x="830" y="129">1</text>
+  </g>
+  <polyline fill="none" stroke="#386641" stroke-width="3" points="220,184 340,184 340,168 460,168 460,184 580,184 580,168 700,168 700,184 820,184 820,168 940,168 940,184 1030,184"/>
+  <g font-family="Menlo, monospace" font-size="12" fill="#386641">
+    <text x="350" y="165">1</text>
+    <text x="590" y="165">3</text>
+    <text x="710" y="165">4</text>
+    <text x="830" y="165">5</text>
+  </g>
+  <polyline fill="none" stroke="#6a4c93" stroke-width="3" points="220,220 340,220 340,204 460,204 460,220 580,220 580,204 700,204 700,220 820,220 820,204 940,204 940,220 1030,220"/>
+  <g font-family="Menlo, monospace" font-size="12" fill="#6a4c93">
+    <text x="350" y="201">1</text>
+    <text x="590" y="201">1</text>
+    <text x="710" y="201">1</text>
+    <text x="830" y="201">1</text>
+  </g>
+  <polyline fill="none" stroke="#8a5a44" stroke-width="3" points="220,260 340,260 340,244 460,244 460,228 580,228 580,212 700,212 700,196 820,196 820,196 940,196 940,212 1030,212"/>
+  <g font-family="Menlo, monospace" font-size="12" fill="#8a5a44">
+    <text x="350" y="241">1</text>
+    <text x="470" y="225">2</text>
+    <text x="590" y="209">3</text>
+    <text x="710" y="193">4</text>
+    <text x="950" y="209">3</text>
+  </g>
+  <g font-family="Menlo, monospace" font-size="12" fill="#213a34">
+    <text x="340" y="288">{ts=1,data=125,crc}</text>
+    <text x="850" y="288">read first packet</text>
+  </g>
+</svg>

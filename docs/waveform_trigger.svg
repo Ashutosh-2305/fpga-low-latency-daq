@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="280" viewBox="0 0 980 280">
+  <rect width="980" height="280" fill="#f7f4ed"/>
+  <rect x="24" y="24" width="932" height="232" rx="14" fill="#fffdf8" stroke="#d4c7af"/>
+  <text x="40" y="52" font-family="Menlo, monospace" font-size="20" fill="#3f3527">Trigger Threshold Verification</text>
+  <text x="40" y="78" font-family="Menlo, monospace" font-size="12" fill="#74644d">Example from tb_trigger: trigger asserts only when data_in is strictly greater than threshold.</text>
+  <g stroke="#ddd2bf" stroke-width="1">
+    <line x1="180" y1="92" x2="920" y2="92"/>
+    <line x1="180" y1="132" x2="920" y2="132"/>
+    <line x1="180" y1="172" x2="920" y2="172"/>
+    <line x1="180" y1="212" x2="920" y2="212"/>
+    <line x1="220" y1="92" x2="220" y2="228"/>
+    <line x1="340" y1="92" x2="340" y2="228"/>
+    <line x1="460" y1="92" x2="460" y2="228"/>
+    <line x1="580" y1="92" x2="580" y2="228"/>
+    <line x1="700" y1="92" x2="700" y2="228"/>
+    <line x1="820" y1="92" x2="820" y2="228"/>
+  </g>
+  <g font-family="Menlo, monospace" font-size="13" fill="#3f3527">
+    <text x="40" y="108">clk</text>
+    <text x="40" y="148">threshold</text>
+    <text x="40" y="188">data_in</text>
+    <text x="40" y="228">trigger_out</text>
+  </g>
+  <g font-family="Menlo, monospace" font-size="12" fill="#6a5b45">
+    <text x="207" y="246">t0</text>
+    <text x="327" y="246">t1</text>
+    <text x="447" y="246">t2</text>
+    <text x="567" y="246">t3</text>
+    <text x="687" y="246">t4</text>
+    <text x="807" y="246">t5</text>
+  </g>
+  <polyline fill="none" stroke="#356859" stroke-width="3" points="180,116 220,116 220,100 280,100 280,116 340,116 340,100 400,100 400,116 460,116 460,100 520,100 520,116 580,116 580,100 640,100 640,116 700,116 700,100 760,100 760,116 820,116 820,100 880,100 880,116 920,116"/>
+  <line x1="180" y1="140" x2="920" y2="140" stroke="#b7791f" stroke-width="3"/>
+  <g font-family="Menlo, monospace" font-size="12" fill="#b7791f">
+    <text x="188" y="135">100</text>
+  </g>
+  <polyline fill="none" stroke="#1f4e79" stroke-width="3" points="180,196 300,196 300,186 420,186 420,196 540,196 540,176 660,176 660,196 780,196 780,166 920,166"/>
+  <g font-family="Menlo, monospace" font-size="12" fill="#1f4e79">
+    <text x="255" y="209">50</text>
+    <text x="375" y="209">100</text>
+    <text x="495" y="209">101</text>
+    <text x="615" y="209">80</text>
+    <text x="745" y="209">150</text>
+  </g>
+  <polyline fill="none" stroke="#c23b22" stroke-width="3" points="180,236 540,236 540,220 660,220 660,236 780,236 780,220 920,220"/>
+  <g font-family="Menlo, monospace" font-size="12" fill="#c23b22">
+    <text x="550" y="217">1</text>
+    <text x="790" y="217">1</text>
+  </g>
+</svg>

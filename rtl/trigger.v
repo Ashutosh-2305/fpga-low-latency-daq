@@ -15,5 +15,4 @@ always @(posedge clk) begin
         trigger_out <= (data_in > threshold);
 end
 
-endmodule// Trigger logic module
-// Detects threshold-crossing events
+endmodule

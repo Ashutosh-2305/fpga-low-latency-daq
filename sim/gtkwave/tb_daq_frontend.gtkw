@@ -1,0 +1,26 @@
+[*]
+[*] GTKWave Analyzer v3.3.107
+[*]
+[size] 1800 960
+[pos] -1 -1
+*-4.000000 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 300
+[signals_width] 280
+[sst_expanded] 1
+@28
+tb_daq_frontend.clk
+@22
+tb_daq_frontend.rst
+tb_daq_frontend.enable
+tb_daq_frontend.data_in[15:0]
+tb_daq_frontend.threshold[15:0]
+tb_daq_frontend.trigger_out
+tb_daq_frontend.timestamp_now[31:0]
+tb_daq_frontend.event_timestamp[31:0]
+tb_daq_frontend.event_data[15:0]
+tb_daq_frontend.event_valid
+tb_daq_frontend.read_en
+tb_daq_frontend.fifo_level[2:0]
+tb_daq_frontend.fifo_full
+tb_daq_frontend.fifo_empty
+tb_daq_frontend.fifo_dout[55:0]

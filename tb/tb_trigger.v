@@ -7,6 +7,7 @@ reg rst;
 reg [15:0] data_in;
 reg [15:0] threshold;
 wire trigger_out;
+integer failures;
 
 trigger uut (
     .clk(clk),
@@ -19,19 +20,46 @@ trigger uut (
 always #5 clk = ~clk;  // 100 MHz clock
 
 initial begin
+    $dumpfile("sim/waves/tb_trigger.vcd");
+    $dumpvars(0, tb_trigger);
+end
+
+task expect_trigger;
+    input [15:0] sample;
+    input expected;
+    begin
+        data_in = sample;
+        @(posedge clk);
+        #1;
+        if (trigger_out !== expected) begin
+            $display("TB_TRIGGER FAIL sample=%0d expected=%0b got=%0b", sample, expected, trigger_out);
+            failures = failures + 1;
+        end
+    end
+endtask
+
+initial begin
+    failures = 0;
     clk = 0;
     rst = 1;
     data_in = 0;
     threshold = 100;
 
-    #20 rst = 0;
+    repeat (2) @(posedge clk);
+    rst = 0;
 
-    #10 data_in = 50;
-    #10 data_in = 120;
-    #10 data_in = 80;
-    #10 data_in = 150;
+    expect_trigger(16'd50, 1'b0);
+    expect_trigger(16'd100, 1'b0);
+    expect_trigger(16'd101, 1'b1);
+    expect_trigger(16'd80, 1'b0);
+    expect_trigger(16'd150, 1'b1);
 
-    #50 $finish;
+    if (failures == 0)
+        $display("TB_TRIGGER PASS");
+    else
+        $fatal(1, "TB_TRIGGER FAILED with %0d mismatches", failures);
+
+    #10 $finish;
 end
 
 endmodule

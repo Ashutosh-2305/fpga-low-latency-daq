@@ -1,0 +1,4 @@
+sim/build/
+sim/waves/
+dump.vcd
+.DS_Store
