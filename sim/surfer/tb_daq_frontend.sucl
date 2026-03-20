@@ -1,0 +1,17 @@
+# Preloaded Surfer view for tb_daq_frontend
+variable_add tb_daq_frontend.clk
+variable_add tb_daq_frontend.rst
+variable_add tb_daq_frontend.enable
+variable_add tb_daq_frontend.data_in
+variable_add tb_daq_frontend.threshold
+variable_add tb_daq_frontend.trigger_out
+variable_add tb_daq_frontend.timestamp_now
+variable_add tb_daq_frontend.event_timestamp
+variable_add tb_daq_frontend.event_data
+variable_add tb_daq_frontend.event_valid
+variable_add tb_daq_frontend.read_en
+variable_add tb_daq_frontend.fifo_level
+variable_add tb_daq_frontend.fifo_full
+variable_add tb_daq_frontend.fifo_empty
+variable_add tb_daq_frontend.fifo_dout
+zoom_fit

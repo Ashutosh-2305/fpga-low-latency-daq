@@ -1,0 +1,7 @@
+# Preloaded Surfer view for tb_trigger
+variable_add tb_trigger.clk
+variable_add tb_trigger.rst
+variable_add tb_trigger.data_in
+variable_add tb_trigger.threshold
+variable_add tb_trigger.trigger_out
+zoom_fit

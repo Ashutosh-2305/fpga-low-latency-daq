@@ -4,7 +4,7 @@ VVP ?= vvp
 RTL := rtl/trigger.v rtl/timestamp_counter.v rtl/fifo.v rtl/crc8.v rtl/daq_frontend.v
 TB_TARGETS := tb_trigger tb_timestamp tb_fifo tb_crc8 tb_daq_frontend
 
-.PHONY: test clean waves
+.PHONY: test clean waves view
 
 test: $(TB_TARGETS)
 
@@ -38,3 +38,6 @@ clean:
 
 waves: test
 	@printf "Waveforms are in sim/waves\n"
+
+view:
+	@./sim/surfer/open_wave.sh $(TB)

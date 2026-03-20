@@ -64,6 +64,7 @@ Prerequisites:
 
 - `iverilog`
 - `vvp`
+- `surfer`
 
 Run the full regression:
 
@@ -78,6 +79,22 @@ Or:
 ```
 
 Generated waveforms are written to `sim/waves/`.
+
+Open waveforms in Surfer with the repo helper:
+
+```bash
+make view TB=tb_trigger
+make view TB=tb_daq_frontend
+```
+
+Or directly:
+
+```bash
+./sim/surfer/open_wave.sh tb_trigger
+./sim/surfer/open_wave.sh tb_daq_frontend
+```
+
+Detailed Surfer usage is documented in `docs/surfer.md`.
 
 ## Results Summary
 
@@ -100,6 +117,8 @@ Trigger threshold crossing:
 Integrated DAQ packet capture:
 
 ![DAQ waveform](docs/waveform_daq.svg)
+
+The current images are illustrative placeholders. The simulation flow emits real VCDs in `sim/waves/`, and the repository is set up to inspect those traces with Surfer.
 
 ## Context
 
